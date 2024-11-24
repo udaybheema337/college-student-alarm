@@ -1,0 +1,157 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* Classic font */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:bisque; /* Light background for a clean look */
+  }
+  
+  .wrapper {
+    width: 440px;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px 30px 38px;
+    background-color: #fff; /* White background to make the content stand out */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  }
+  
+  h1, h2, h3, h4 {
+    font-weight: 300;
+    font-size: 24px; /* Consistent font size for headings */
+    color: #333; /* Classic, neutral text color */
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 0;
+  }
+  
+  h2 {
+    font-size: 32px;
+    margin-top: 0;
+  }
+  
+  h3 {
+    font-size: 28px;
+  }
+  
+  h4 {
+    font-size: 26px;
+  }
+  
+  h5 {
+   text-align: center;
+   color:p;
+    font-size: 30px;
+  }
+  
+  .wrapper .content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .wrapper .content .column {
+    border-radius: 9px;
+    padding: 0 10px;
+    border: 1px solid #ccc; /* Lighter border for a subtle effect */
+    width: calc(33.333% - 10px);
+  }
+  
+  .column select {
+    outline: none;
+    border: none;
+    height: 53px;
+    width: 100%;
+    font-size: 19px;
+    padding-left: 10px;
+    background-color:whitesmoke; /* Light background for selects */
+  }
+  
+  
+  button {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 53px;
+    font-size: 22px;
+    border-radius: 9px;
+    background-color: #4CAF50; /* Classic green button */
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Disabled state for content */
+  .wrapper .content.disable {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* Center the content within the wrapper */
+  .wrapper.column {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Accessibility improvement for selects */
+  select:focus {
+    outline: 2px solid #4CAF50;
+  }
+  
+  /* Ensure the layout looks good on all screen sizes */
+  @media (max-width: 480px) {
+    .wrapper {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    .wrapper .content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .wrapper .content .column {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    h2, h3 {
+      font-size: 26px;
+    }
+  
+    button {
+      font-size: 20px;
+    }
+    
+  }
+ 
